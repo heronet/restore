@@ -1,5 +1,5 @@
-import { AppBar, Button, Switch, Toolbar, Typography } from "@mui/material";
-
+import { AppBar, Switch, Toolbar, Typography } from "@mui/material";
+import "./header.css";
 type Props = {
   dark: boolean;
   switchTheme: () => void;
@@ -7,7 +7,7 @@ type Props = {
 
 const Header = ({ dark, switchTheme }: Props) => {
   return (
-    <AppBar position="static" sx={{ mb: 4 }}>
+    <AppBar position="sticky" sx={{ mb: 4 }} className="header">
       <Toolbar>
         <Typography variant="h6">RE-Store</Typography>
         <Switch onChange={switchTheme} checked={dark}></Switch>
